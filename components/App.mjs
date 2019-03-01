@@ -1,8 +1,9 @@
 import { html } from '/packages/preact.mjs'
+import Nav from '/components/Nav.mjs'
 
 const App = () => html`
   <div class="app">
-    Hello world from preact+htm
+    <${Nav} />
   </div>
 `
 
