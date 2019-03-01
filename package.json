@@ -1,0 +1,11 @@
+{
+  "name": "fabricionaweb.github.io",
+  "version": "1.0.0",
+  "main": "index.html",
+  "homepage": "https://fabricio.dev",
+  "private": true,
+  "repository": "git@github.com:fabricionaweb/fabricionaweb.github.io",
+  "author": "Fabricio Augusto <fabricionaweb@gmail.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
