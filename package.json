@@ -7,5 +7,10 @@
   "repository": "git@github.com:fabricionaweb/fabricionaweb.github.io",
   "author": "Fabricio Augusto <fabricionaweb@gmail.com>",
   "license": "MIT",
-  "dependencies": {}
+  "scripts": {
+    "start": "serve ./ -p 8000 -s"
+  },
+  "dependencies": {
+    "serve": "^10.1.2"
+  }
 }
