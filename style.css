@@ -4,6 +4,7 @@
   --color-blue:   #5badf0;
   --color-black:  #666;
   --color-white:  #fff;
+  --color-red:    #f05b5b;
 
   --color-dark:   #222;
   --color-light:  #aaa;
@@ -30,9 +31,13 @@ a {
     text-decoration: underline;
   }
 
+.color-red {
+  color: var(--color-red);
+}
+
 .main {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 680px;
   padding: 0 20px;
   position: relative;
 }
@@ -45,7 +50,7 @@ a {
   justify-content: space-between;
 }
   .nav__item {
-    font-size: 13px;
+    font-size: .8rem;
     padding: 8px 12px;
   }
     .nav__item:hover {
@@ -60,7 +65,7 @@ a {
 .profile {
   text-align: center;
   padding: 50px 0 40px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   border-bottom: 1px solid var(--color-slight);
 }
   .profile__picture {
@@ -70,21 +75,85 @@ a {
     border-radius: 50%;
   }
   .profile__name {
-    font-size: 22px;
+    font-size: 1.3rem;
     font-weight: 400;
     color: var(--color-dark);
     margin: 20px 0 10px;
   }
   .profile__role {
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 300;
     color: var(--color-light);
     margin: 0;
   }
 
+.loading {
+  display: block;
+  background: url('/loading.svg') no-repeat center center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  overflow: hidden;
+  color: transparent;
+}
+
+.latestposts {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-slight);
+}
+
+.postpreview {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+  .postpreview + .postpreview {
+    border-top: 1px solid var(--color-slight);
+  }
+  .postpreview__link {
+    color: var(--color-light);
+    display: block;
+    position: relative;
+  }
+    .postpreview__link:hover {
+      text-decoration: none;
+    }
+    .postpreview__link:hover .postpreview__title {
+      color: var(--color-blue);
+    }
+  .postpreview__title {
+    color: var(--color-dark);
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+  }
+  .postpreview__description {
+    color: var(--color-light);
+    margin: 0;
+  }
+  .postpreview__date {
+    display: none;
+    font-weight: 300;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
 @media (min-width: 540px) {
   .main {
     padding: 0 40px;
+  }
+  .profile {
+    margin-bottom: 40px;
+  }
+  .latestposts {
+    padding-bottom: 40px;
+  }
+  .postpreview__date {
+    display: block;
+  }
+  .postpreview__link {
+    padding-right: 100px;
   }
 }
 

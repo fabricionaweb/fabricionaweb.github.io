@@ -6,6 +6,7 @@ import Home from '/components/Home.mjs'
 const App = () => html`
   <div class="app">
     <${Nav} />
+
     <main class="main">
       <${Router}>
         <${Home} default />
