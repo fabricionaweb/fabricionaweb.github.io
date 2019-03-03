@@ -1,0 +1,33 @@
+{
+	"modified": "2019-03-01T22:18:27.816Z",
+	"posts": [
+		{
+			"data": {
+				"title": "Hospedando sites estáticos gratuitamente",
+				"date": "2016-07-13T01:59:54.000Z",
+				"description": "De graça, mas com muito estilo"
+			},
+			"content": "\nNão é em todo projeto que precisamos de linguagem uma back-end, as vezes podemos resolver nossos problemas simplesmente com HTML, JS e CSS. E em alguns casos precisamos também publicar estes projetos. Como fazer? \n\n~~Criar um sub-domínio ou pasta no meu servidor web e subir tudo por ftp~~\n\n# Surge CDN\n\nUtilizando o [surge](https://surge.sh), com apenas **um comando** e pouquissimos minutos você já tem um link permanente com seus arquivos no ar!\n\nO **surge** usa um CLI feita com node, é um pacote que está no npm e você precisa instala-lo globalmente:\n\n```sh\nnpm install -g surge # dependendo do seu sistema pode precisar de sudo\n```\n\nApós isso é só rodar o comando `surge` dentro do diretório que pretende subir: \n\n```sh\ncd ~/Sites/landpage\nsurge\n```\n\nou passar o caminho como argumento:\n\n```sh\nsurge ~/Sites/landpage\n```\n\nSendo a primeira vez que você roda o comando será solicitado credenciais para fazer login ou cadastro caso não possua conta (confirme por e-mail).\n\nEm seguida ele sugere um domínio `id-random.surge.sh`, mas que você pode [alterar se desejar](https://surge.sh/help/adding-a-custom-domain). Se der tudo certo você verá uma mensagem de sucesso e sua url. \n\nO domínio também pode ser passado como argumento, isso evita que o surge crie novos domínios a cada deploy (e ele faz isso) e mantem seus projetos atualizados:\n\n```sh\nsurge ~/Sites/landpage --domain my-landpage.surge.sh\n```\n\nPronto, seu site estático esta no ar! Se o seu projeto possui uma **index.html** estará tudo como previsto.\n\n## Com muito estilo\n\nVocê ~~deve~~ pode ir na [documentação oficial](https://surge.sh/help/) para descobrir todos os poderes. Mas vou adiantar algumas coisas que eu acho **super cool**\n\n#### CNAME\n\nVocê cria um arquivo chamado `CNAME` e escreve dentro dele o domínio que deseja utilizar para o projeto em questão, ex: `my-landpage.surge.sh`  \n\nUtilizar dos sub-domínios `*.surge.sh` é mais rapido e prático. Mas isso pode limitar as opções, então caso você queira pode configurar seus [próprios domínios e sub-domínios](https://surge.sh/help/adding-a-custom-domain).\n\n#### URLs amigáveis\n\nNão poderia ser [mais simples](https://surge.sh/help/using-clean-urls-automatically). Basta remover a extensão `.html` das urls que ele ainda procura pelo arquivo certinho.\n\n#### Fallback pushState\n\nFoi o motivo pelo qual migrei o blog (em breve terá um post) do GitHub Pages. \n\nEsta técnica se resume em direcionar todas as rotas para o mesmo arquivo, neste caso `200.html`. Com isso você consegue usar o pushState no seu framework javascript maravilhoso. [Leia mais na documentação](https://surge.sh/help/adding-a-200-page-for-client-side-routing).\n\n#### Ignore deploy\n\nAs vezes temos arquivos temporários, bibliotecas, outras coisas que não precisamos subir e só atrasaria o deploy. Para ignorar estes arquivos e diretórios, basta criar um arquivo chamado `.surgeignore` na raiz do projeto e seguir o mesmo formato do já conhecido `.gitignore`. [Leia mais na documentação](https://surge.sh/help/ignoring-files-and-directories).\n\n## Preço\n\nTudo isso que eu citei e mais algumas coisas é de graça e de uso ilimitado. Mas se sentiu falta de algo eles contam com um plano por **US 13/mês por projeto** com algumas vantagens:\n\n* Suporte para SSL\n* Forçar o uso de SSL\n* Suporte a CORS\n* Rotas personalizadas\n* URL protegida por senha (HTTP Basic Auth)\n\nSe ainda assim não resolver, bom... ai você pode pensar em usar uma linguagem back-end.\n\nEm breve farei um post apresentando o [zeit now](https://zeit.co/now), uma \"hospedagem\" para aplicações node com uma abordagem muito parecida.\n\nAté a próxima!\n",
+			"slug": "hospedando-sites-estaticos-gratuitamente"
+		},
+		{
+			"data": {
+				"title": "Bem vindo ao mundo, blog!",
+				"date": "2016-06-01T19:46:33.000Z",
+				"description": "O lugar onde pretendo escrever sobre as coisas que eu estudo"
+			},
+			"content": "\nEste será o espaço onde eu pretendo manter atualizado com postagens sobre meus desafios, estudos, descobertas ~~e o que eu quiser~~ do mundo de um desenvolvedor front-end.\n\nPara saber mais sobre mim basta clicar no botão [sobre](/about) flutuando ali na direita.\n",
+			"slug": "bem-vindo-ao-mundo"
+		}
+	],
+	"pages": [
+		{
+			"data": {
+				"title": "Sobre",
+				"tag": "about"
+			},
+			"content": "\n_Analista JavaScript na [Codeminer42](http://codeminer42.com)_\n\nTenho 23 e sou desenvolvedor web há 8 anos, comecei trabalhando com PHP e muito WordPress mas hoje minha paixão é **JavaScript**.\n\nEntusiasta de novas tecnologias, gosto de montar servidores linux, por isso posso também ser chamado de *DevOps*.\n\nCaso tenha algum projeto bacana e acredite que eu possa somar, entre em contato!\n\nPode me seguir no [GitHub][git] e [Twitter][tw], encontrar no [Linkedin][in] e [Facebook][fb] ou simplesmente mandar um [email][mail].\n\n[git]:  https://github.com/fabricionaweb\n[tw]:   https://twitter.com/fabricionaweb\n[fb]:   https://facebook.com/fabricionaweb\n[in]:   https://linkedin.com/in/fabricionaweb\n[mail]: mailto:fabricionaweb@gmail.com\n\n---\n\n#### Sobre este site\n\nSe você achou este site legal e gostaria de estudar, usar ou saber mais a respeito, ele é um projeto que está compartilhado no [git][repo] e em breve terá um post dedicado sobre como eu o fiz.\n\nSinta-se à vontade para corrigir, contribuir e utilizar :)\n\n[repo]: https://github.com/fabricionaweb/fabricionaweb.me\n",
+			"slug": "about"
+		}
+	]
+}
