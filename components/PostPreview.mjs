@@ -11,9 +11,15 @@ const PostPreview = ({ data, slug }) => {
   return html`
     <article class="postpreview">
       <a class="postpreview__link" href=${'/post/' + slug} title=${title}>
-        <aside class="postpreview__date">${formatedDate}</aside>
-        <h2 class="postpreview__title">${title}</h2>
-        <p class="postpreview__description">${description}</p>
+        <aside class="postpreview__date">
+          ${formatedDate}
+        </aside>
+        <h2 class="postpreview__title">
+          ${title}
+        </h2>
+        <p class="postpreview__description">
+          ${description}
+        </p>
       </a>
     </article>
   `
