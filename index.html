@@ -10,6 +10,31 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    hello world
+    <main class="wrapper">
+      <h1 class="title" data-text="I'm Fabricio Augusto">
+        I'm Fabricio Augusto
+      </h1>
+      <p class="subtitle">
+        <span data-typed-area></span>
+        <span data-typed-string hidden>Front End Developer.</span>
+        <span data-typed-string hidden>Based in Lisbon.</span>
+        <span data-typed-string hidden>@fabricionaweb</span>
+      </p>
+    </main>
+    <script src="//unpkg.com/typeit@6.0.2/dist/typeit.min.js"></script>
+    <script>
+      ;(function() {
+        const typedStrings = Array.from(document.querySelectorAll('[data-typed-string]'))
+        const mappedStrings = typedStrings.map(({ textContent }) => textContent.trim())
+
+        return new TypeIt('[data-typed-area]', {
+          strings: mappedStrings,
+          breakLines: false,
+          loop: true,
+          nextStringDelay: 2500,
+          loopDelay: 5000,
+        }).go()
+      })()
+    </script>
   </body>
 </html>
