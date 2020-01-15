@@ -1,4 +1,4 @@
-import { html } from '/packages/preact.mjs'
+import { html } from "/web_modules/htm/preact.js"
 
 const Profile = ({ name, role, picture }) => html`
   <header class="profile">

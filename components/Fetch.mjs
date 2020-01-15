@@ -1,4 +1,4 @@
-import { Component } from '/packages/preact.mjs'
+import { Component } from "/web_modules/htm/preact.js"
 
 class Fetch extends Component {
   constructor() {
@@ -12,14 +12,14 @@ class Fetch extends Component {
 
   componentDidMount() {
     fetch(this.props.url)
-      .then((res) => res.json())
-      .then((data) =>
+      .then(res => res.json())
+      .then(data =>
         this.setState({
           loading: false,
           data,
         })
       )
-      .catch((err) =>
+      .catch(err =>
         this.setState({
           loading: false,
           error: err.message,
@@ -28,7 +28,7 @@ class Fetch extends Component {
   }
 
   render({ children }, state) {
-    return children[0](state) // children is an array
+    return children(state)
   }
 }
 

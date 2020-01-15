@@ -1,9 +1,9 @@
-import { html, render } from '/packages/preact.mjs'
-import App from '/components/App.mjs'
+import { render, html } from "/web_modules/htm/preact.js"
+import App from "/components/App.mjs"
 
 render(
   html`
     <${App} />
   `,
-  document.body
+  document.getElementById("root")
 )

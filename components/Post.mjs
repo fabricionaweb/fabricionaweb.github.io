@@ -1,8 +1,8 @@
-import { html } from '/packages/preact.mjs'
-import snarkdown from '/packages/snarkdown.mjs'
+import { html } from "/web_modules/htm/preact.js"
+import snarkdown from "/web_modules/snarkdown.js"
 
 const Post = ({ posts, slug }) => {
-  const post = posts.find((post) => post.slug === slug)
+  const post = posts.find(post => post.slug === slug)
 
   if (!post) {
     return html`
@@ -12,13 +12,13 @@ const Post = ({ posts, slug }) => {
 
   const { data, content } = post
   const { title, date } = data
-  const formatedDate = new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  const formatedDate = new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   })
   const postContent = {
-    __html: snarkdown(content)
+    __html: snarkdown(content),
   }
 
   return html`

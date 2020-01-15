@@ -1,10 +1,11 @@
-import { html } from '/packages/preact.mjs'
-import Router from '/packages/router.mjs'
-import Nav from '/components/Nav.mjs'
-import Home from '/components/Home.mjs'
-import Post from '/components/Post.mjs'
-import Fetch from '/components/Fetch.mjs'
-import Loading from '/components/Loading.mjs'
+import { html } from "/web_modules/htm/preact.js"
+import Router from "/web_modules/preact-router.js"
+
+import Nav from "./Nav.mjs"
+import Home from "./Home.mjs"
+import Post from "./Post.mjs"
+import Fetch from "./Fetch.mjs"
+import Loading from "./Loading.mjs"
 
 const App = () => html`
   <div class="app">
@@ -23,7 +24,7 @@ const App = () => html`
 
           if (error || !posts || !pages) {
             return html`
-              <p class="color-red">${error || 'Response error'}</p>
+              <p class="color-red">${error || "Response error"}</p>
             `
           }
 

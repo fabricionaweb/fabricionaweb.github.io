@@ -8,9 +8,26 @@
   "author": "Fabricio Augusto <fabricionaweb@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "serve ./ -p 8000 -s"
+    "start": "serve ./ -p 8000 -s",
+    "prepare": "snowpack --optimize"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "preact",
+      "preact/hooks",
+      "preact-router",
+      "htm/preact",
+      "snarkdown",
+      "modern-normalize/modern-normalize.css"
+    ]
   },
   "dependencies": {
-    "serve": "^10.1.2"
+    "htm": "^2.2.1",
+    "modern-normalize": "^0.6.0",
+    "preact": "^10.2.1",
+    "preact-router": "^3.1.0",
+    "serve": "^11.3.0",
+    "snarkdown": "^1.2.2",
+    "snowpack": "^1.0.5"
   }
 }

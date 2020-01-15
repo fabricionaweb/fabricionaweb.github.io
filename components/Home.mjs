@@ -1,6 +1,7 @@
-import { html } from '/packages/preact.mjs'
-import Profile from '/components/Profile.mjs'
-import PostPreview from '/components/PostPreview.mjs'
+import { html } from "/web_modules/htm/preact.js"
+
+import Profile from "./Profile.mjs"
+import PostPreview from "./PostPreview.mjs"
 
 const Home = ({ posts }) => html`
   <div class="home">
@@ -12,7 +13,7 @@ const Home = ({ posts }) => html`
 
     <section class="latestposts">
       ${posts.map(
-        (props) => html`
+        props => html`
           <${PostPreview} ...${props} />
         `
       )}
