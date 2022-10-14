@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Fabricio Augusto - Front-end Developer</title>
+    <title>Fabricio Silva - Front-end Developer</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimal-ui"
@@ -11,30 +11,32 @@
   </head>
   <body>
     <main class="wrapper">
-      <h1 class="title" data-text="I'm Fabricio Augusto">
-        I'm Fabricio Augusto
-      </h1>
+      <h1 class="title" data-text="I'm Fabricio Silva">I'm Fabricio Silva</h1>
       <p class="subtitle">
         <span data-typed-area></span>
         <span data-typed-string hidden>Front End Developer.</span>
-        <span data-typed-string hidden>Based in Lisbon.</span>
+        <span data-typed-string hidden>Based in Portugal.</span>
         <span data-typed-string hidden>@fabricionaweb</span>
       </p>
     </main>
     <script src="//unpkg.com/typeit@6.0.2/dist/typeit.min.js"></script>
     <script>
-      ;(function() {
-        const typedStrings = Array.from(document.querySelectorAll('[data-typed-string]'))
-        const mappedStrings = typedStrings.map(({ textContent }) => textContent.trim())
+      (function () {
+        const typedStrings = Array.from(
+          document.querySelectorAll("[data-typed-string]")
+        );
+        const mappedStrings = typedStrings.map(({ textContent }) =>
+          textContent.trim()
+        );
 
-        return new TypeIt('[data-typed-area]', {
+        return new TypeIt("[data-typed-area]", {
           strings: mappedStrings,
           breakLines: false,
           loop: true,
           nextStringDelay: 2500,
           loopDelay: 5000,
-        }).go()
-      })()
+        }).go();
+      })();
     </script>
   </body>
 </html>
