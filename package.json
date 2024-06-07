@@ -5,7 +5,7 @@
   "homepage": "https://fabricio.dev",
   "private": true,
   "repository": "git@github.com:fabricionaweb/fabricionaweb.github.io",
-  "author": "Fabricio Augusto <fabricionaweb@gmail.com>",
+  "author": "Fabricio Silva <hi@fabricio.dev>",
   "license": "MIT",
   "scripts": {
     "start": "serve ./ -p 8000"
